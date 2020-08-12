@@ -219,6 +219,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -246,13 +247,19 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
+jekyll-archives:
+ enabled: []
 #     - categories
 #     - tags
-#   layouts:
+ layouts: archive
 #     category: archive-taxonomy
 #     tag: archive-taxonomy
+ permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 #   permalinks:
 #     category: /categories/:name/
 #     tag: /tags/:name/
