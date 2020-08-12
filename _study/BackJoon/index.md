@@ -2,6 +2,7 @@
 layout: post
 title:  "Backjoon"
 subtitle: 2557
+categories: Backjoon
 blog: true
 text: true
 ---
