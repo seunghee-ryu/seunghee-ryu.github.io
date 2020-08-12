@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-11T19:12:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Site Title</title><subtitle>An amazing website.</subtitle><author><name>Your Name</name></author><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-08-11T18:38:59+09:00</published><updated>2020-08-11T18:38:59+09:00</updated><id>http://localhost:4000/jekyll/update/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-12T14:07:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tarae-nuna</title><subtitle>recording</subtitle><author><name>Seunghee Ryu</name></author><entry><title type="html">오버로딩</title><link href="http://localhost:4000/bitcamp/method-overloading/" rel="alternate" type="text/html" title="오버로딩" /><published>2020-08-12T00:00:00+09:00</published><updated>2020-08-12T00:00:00+09:00</updated><id>http://localhost:4000/bitcamp/method-overloading</id><content type="html" xml:base="http://localhost:4000/bitcamp/method-overloading/">&lt;h1 id=&quot;메서드-오버로딩&quot;&gt;메서드 오버로딩&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;오버로딩(overloading)?
+파라미터의 형식은 다르지만 같은 기능을 수행하는 메서드에 대해 같은 이름을 부여함으로써 프로그래밍의 일관성을 제공하기 위한 문법이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;이때 파라미터의 이름은 상관이 없다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;부모 클래스와 자식 클래스에 이름이 같은 메서드를 만든다면 그것 역시 오버로딩이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;println 이나 valueOf는 전형적인 오버로딩의 예이다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;메서드-오버라이딩&quot;&gt;메서드 오버라이딩&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;오버라이딩(overriding)?
+부모로부터 상속 받은 메서드 중에서 자신(서브클래스)의 역할에 맞지 않는 메서드가 있다면, 자신(서브클래스)의 역할에 맞춰 상속받은 메서드를 재정의하여 프로그래밍의 일관성을 확보하는 문법이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;부모 클래스에 있는 메서드를 자식 클래스에서 재정의.&lt;/li&gt;
+  &lt;li&gt;덮어쓰는 것이 아니라 자식에서 구성을 바꾼 것.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;필드-오버라이딩&quot;&gt;필드 오버라이딩&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this.변수 = 현재 클래스에서부터 찾아 올라가는 것&lt;/li&gt;
+  &lt;li&gt;super.변수 = 상위 클래스에서부터 찾아 올라가는 것&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;override&quot;&gt;@Override&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;애노테이션이라고 한다.&lt;/li&gt;
+  &lt;li&gt;오버라이딩을 제대로 했는지 컴파일러에게 검사하도록 요구하는 것&lt;/li&gt;
+  &lt;li&gt;오버라이딩과 오버로딩을 헷갈리는 것을 방지한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;알파테스트&quot;&gt;알파테스트&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;개발팀에서 원하는 작업이 정확하게 되는지 검사하는 것&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;베타테스트&quot;&gt;베타테스트&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;시나리오를 써서 테스트 팀에서 테스트를 하는 것&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;접근-제어&quot;&gt;접근 제어&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;4개 방법이 있다.&lt;/li&gt;
+  &lt;li&gt;private : 현재 클래스&lt;/li&gt;
+  &lt;li&gt;(default) : 현재 클래스 + 같은 패키지&lt;/li&gt;
+  &lt;li&gt;protected : 현재 클래스 + 같은 패키지 + 서브 클래스&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;public : 모두&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;원칙은 무조건 private로 만들고 공개할 대상만 public으로 한다.&lt;/li&gt;
+  &lt;li&gt;필요에 따라 디폴트나 프로텍티드로 변경한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;메서드-오버라이딩-1&quot;&gt;메서드 오버라이딩&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;this.메서드 = 현재 클래스부터 호출할 메서드를 찾는다.&lt;/li&gt;
+  &lt;li&gt;super.메서드 = 부모 클래스로부터 호출할 메서드를 찾는다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Seunghee Ryu</name></author><category term="theory" /><summary type="html">메서드 오버로딩 오버로딩(overloading)? 파라미터의 형식은 다르지만 같은 기능을 수행하는 메서드에 대해 같은 이름을 부여함으로써 프로그래밍의 일관성을 제공하기 위한 문법이다.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-08-11T18:38:59+09:00</published><updated>2020-08-11T18:38:59+09:00</updated><id>http://localhost:4000/jekyll/update/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
@@ -14,4 +88,10 @@
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Your Name</name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Seunghee Ryu</name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Backjoon 2557</title><link href="http://localhost:4000/backjoon/Backjoon-2557/" rel="alternate" type="text/html" title="Backjoon 2557" /><published>2020-08-11T00:00:00+09:00</published><updated>2020-08-11T00:00:00+09:00</updated><id>http://localhost:4000/backjoon/Backjoon%202557</id><content type="html" xml:base="http://localhost:4000/backjoon/Backjoon-2557/">&lt;h1 id=&quot;main-클래스는-main-이라고-적어야-한다&quot;&gt;main 클래스는 main 이라고 적어야 한다.&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;kp&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;no&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Seunghee Ryu</name></author><category term="Backjoon" /><summary type="html">main 클래스는 main 이라고 적어야 한다.</summary></entry></feed>
