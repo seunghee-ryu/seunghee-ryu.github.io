@@ -278,10 +278,15 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: posts
+      type: foo
     values:
       layout: single
       author_profile: true
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
       read_time: true
       comments: # true
       share: true
