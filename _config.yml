@@ -19,10 +19,10 @@ locale                   : "en-US"
 title                    : "Tarae-nuna"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Seunghee Ryu"
+name                     : "타래누나"
 description              : "recording"
 url                      : "https://seunghee-ryu.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -207,7 +207,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 10 # amount of posts to show
+paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -247,14 +247,14 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-jekyll-archives:
-# enabled: 
+# jekyll-archives:
+#   enabled:
 #     - categories
-#    - tags
-# layouts: archive
+#     - tags
+#   layouts:
 #     category: archive-taxonomy
 #     tag: archive-taxonomy
- permalinks:
+# permalinks:
     year: '/:year/'
     month: '/:year/:month/'
     day: '/:year/:month/:day/'
@@ -278,7 +278,7 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: foo
+      type: posts
     values:
       layout: single
       author_profile: true
@@ -287,7 +287,18 @@ defaults:
       type: category
     values:
       comments: false
-      read_time: true
+      read_time: false
       comments: # true
       share: true
-      related: true
+      related: false
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: # false
+      share: true
+      related: false

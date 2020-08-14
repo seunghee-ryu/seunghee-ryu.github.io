@@ -1,3 +1,11 @@
+---
+title: "2020-08-13 TLI"
+permalink: /categories/TLI/
+layout: category
+author_profile: true
+taxonomy: TLI
+---
+
 # 2020-08-13 TLI
 
 ## 추상화
