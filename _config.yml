@@ -248,12 +248,12 @@ tag_archive:
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
- enabled: 
-     - categories
-     - tags
- layouts: archive
-     category: archive-taxonomy
-     tag: archive-taxonomy
+# enabled: 
+#     - categories
+#    - tags
+# layouts: archive
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
  permalinks:
     year: '/:year/'
     month: '/:year/:month/'
