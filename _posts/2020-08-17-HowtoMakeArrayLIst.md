@@ -7,6 +7,7 @@
 
 ```java
 public class MyArrayList {
+// 01
     static Object[] elementData = new Object[5];
     static int size;
 }
@@ -16,6 +17,7 @@ public class MyArrayList {
 
 ```java
 public class MyArrayList {
+// 01
     static Object[] elementData = new Object[5];
     static int size;
 
@@ -31,6 +33,7 @@ public class MyArrayList {
 
 ```java
 public class MyArrayList {
+// 01
     static Object[] elementData = new Object[5];
     static int size;
 
@@ -51,6 +54,7 @@ public class MyArrayList {
 
 ```java
 public class MyArrayList {
+// 01
     static Object[] elementData = new Object[5];
     static int size;
 
@@ -84,6 +88,7 @@ public class MyArrayList {
 
 ```java
 public class MyArrayList {
+// 01
     static Object[] elementData = new Object[5];
     static int size;
 
@@ -123,6 +128,7 @@ public class MyArrayList {
 
 ```java
 public class MyArrayList {
+// 01
     static Object[] elementData = new Object[5];
     static int size;
 
@@ -324,6 +330,7 @@ public class MyArrayList {
     static public Object get(int index) {
         // index의 범위를 지정
         // size는 index보다 1이 크기 때문에 index가 size 보다 크거나 같으면 범위를 벗어난다.
+        // 예: size가 12345 일 때 index는 01234 이다.
         if (index < 0 || index >= size) {
         throw new ArrayIndexOutOfBoundsException("인덱스가 유효하지 않습니다.");
         }
@@ -391,8 +398,6 @@ public class MyArrayList {
 
 // 03 // 09
     static public Object get(int index) {
-        // index의 범위를 지정
-        // size는 index보다 1이 크기 때문에 index가 size 보다 크거나 같으면 범위를 벗어난다.
         if (index < 0 || index >= size) {
         throw new ArrayIndexOutOfBoundsException("인덱스가 유효하지 않습니다.");
         }
