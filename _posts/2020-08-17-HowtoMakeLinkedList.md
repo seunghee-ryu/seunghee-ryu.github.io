@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "How to make LinkedList"
+categories: TLI
+---
 # TLI How to make LinkedList
 
 ## 01) LinkedList 클래스 정의
