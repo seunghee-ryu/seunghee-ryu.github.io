@@ -255,11 +255,11 @@ category_archive:
 #     category: archive-taxonomy
 #     tag: archive-taxonomy
 # permalinks:
-    year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
-    tag: '/tag/:name/'
-    category: '/category/:name/'
+#    year: '/:year/'
+#    month: '/:year/:month/'
+#    day: '/:year/:month/:day/'
+#    tag: '/tag/:name/'
+#    category: '/category/:name/'
 #   permalinks:
 #     category: /categories/:name/
 #     tag: /tags/:name/
