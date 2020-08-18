@@ -2,6 +2,7 @@
 layout: post
 title:  "ArrayList, LinkedList"
 categories: TLI
+layout : single
 ---
 
 # 2020-08-17 TLI

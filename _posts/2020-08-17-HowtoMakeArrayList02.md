@@ -2,6 +2,7 @@
 layout: post
 title:  "How to make ArrayList02"
 categories: TLI
+layout : single
 ---
 # TLI How to make ArrayList02
 

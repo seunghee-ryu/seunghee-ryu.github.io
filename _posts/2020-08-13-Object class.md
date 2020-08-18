@@ -2,6 +2,7 @@
 layout: post
 title:  "Object Class"
 categories: TLI
+layout : single
 ---
 
 # 2020-08-13 TLI

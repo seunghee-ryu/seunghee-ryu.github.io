@@ -2,6 +2,7 @@
 layout: post
 title:  "How to make LinkedList"
 categories: TLI
+layout : single
 ---
 # TLI How to make LinkedList
 

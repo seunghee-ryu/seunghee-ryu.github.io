@@ -2,6 +2,7 @@
 layout: post
 title:  "ArrayList"
 categories: TLI
+layout : single
 ---
 
 # 2020-08-14 TLI
