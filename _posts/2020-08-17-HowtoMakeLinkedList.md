@@ -7,16 +7,16 @@ layout : single
 # TLI How to make LinkedList
 
 ## 01) LinkedList 클래스 정의
-<details><summary>click</summary>
+
 ```java
 // 01
 public class MyLinkedList {
 
 }
 ```
-</details>
 
 ## 02) 값을 담을 노드 클래스를 설계한다.
+
 ```java
 // 01
 public class MyLinkedList {
