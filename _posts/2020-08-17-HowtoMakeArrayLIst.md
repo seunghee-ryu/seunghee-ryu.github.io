@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "How to make ArrayList"
+categories: TLI
+---
+
 # TLI How to make ArrayList
 
 ## 01) 인스턴스의 주소를 담을 레퍼런스 배열을 준비한다.

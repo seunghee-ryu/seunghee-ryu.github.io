@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "How to make ArrayList02"
+categories: TLI
+---
 # TLI How to make ArrayList02
 
 ## 11) set()을 호출할 때 인덱스가 유효하지 않으면 예외를 발생시킨다.

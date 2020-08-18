@@ -1,9 +1,7 @@
 ---
-title: "2020-08-13 TLI"
-permalink: /categories/TLI/
-layout: category
-author_profile: true
-taxonomy: TLI
+layout: post
+title:  "Object Class"
+categories: TLI
 ---
 
 # 2020-08-13 TLI

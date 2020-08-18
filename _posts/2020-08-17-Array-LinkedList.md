@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "ArrayList, LinkedList"
+categories: TLI
+---
+
 # 2020-08-17 TLI
 
 ## ArrayList
