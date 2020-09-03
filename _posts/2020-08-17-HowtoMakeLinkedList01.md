@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to make LinkedList"
+title:  "How to make LinkedList 01"
 categories: TLI
 layout : single
 ---
