@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Object Class"
-categories: TLI
+categories: TIL
 layout : single
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ArrayList"
-categories: TLI
+categories: TIL
 layout : single
 ---
 
