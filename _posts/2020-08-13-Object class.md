@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Object Class"
-categories: TIL
+categories: java basic
 layout : single
 ---
 

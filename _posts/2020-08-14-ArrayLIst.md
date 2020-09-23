@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ArrayList"
-categories: TIL
+categories: java basic
 layout : single
 ---
 
