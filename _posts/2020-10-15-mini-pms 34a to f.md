@@ -219,6 +219,7 @@ public class ServerApp {
         - ServerApp 에서 해당 코드를 가져온다.
     - `ServerApp` 클래스 변경
         - 클라이언트 요청 처리를 ClientHandler에게 맡긴다.
+
 ```
 // 클라이언트 요청을 처리하는 일을 한다.
 public class ClientHandler implements Runnable {
@@ -419,6 +420,7 @@ public class ServerApp {
     - 코드가 여러 블록에 중첩되면 될수록 들여쓰기를 하면서 코드를 읽기가 불편해진다.
     - 익명 클래스의 코드를 바깥 클래스의 멤버로 만든 후 그 바깥 클래스의 멤버를 호출한다.
     - 만약 익명 클래스가 메서드 한개짜리 인터페이스를 구현하고 그 코드도 간단하다면 람다 문법을 사용하면 간편하게 할 수 있다.
+
 ```
 public class ServerApp {
   public static void main(String[] args) {
