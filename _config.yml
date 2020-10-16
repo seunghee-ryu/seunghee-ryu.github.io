@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "dirt" #"default" # "air", "aqua", "contrast", "dark"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Tarae-nuna"
+title                    : "Study"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "타래누나"
+name                     : "타래"
 description              : "recording"
 url                      : "https://seunghee-ryu.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
