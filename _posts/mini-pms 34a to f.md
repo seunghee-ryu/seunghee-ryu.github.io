@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "mini-pms 34"
+title:  "mini-pms 34a to e/f"
 categories: pms
 layout : single
 ---
 
-# ServerApp 34a~f
-# ClientApp 34a~e
+# Server 34a~f
+# Client 34a~e
 
-# ServerApp
+# Server
 
 ## 01) 간단한 메시지를 송수신 할 수 있도록 한다.
 ```
@@ -478,7 +478,7 @@ public class ServerApp {
 ```
 
 
-# ClientApp
+# Client
 
 ## 01) 간단한 메시지를 송수신 할 수 있도록 한다.
 ```
