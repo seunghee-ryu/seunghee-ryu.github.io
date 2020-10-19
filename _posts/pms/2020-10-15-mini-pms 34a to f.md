@@ -5,13 +5,11 @@ categories: pms
 layout : single
 ---
 
-### Server 34a~f
-### Client 34a~e
-
 # Server
 
 ## 01) 간단한 메시지를 송수신 할 수 있도록 한다.
-```
+
+```java
 public class ServerApp {
   public static void main(String[] args) {
 
@@ -40,7 +38,8 @@ public class ServerApp {
 ```
 
 ## 02) 사용자가 quit 명령을 입력할 때까지 반복한다.
-```
+
+```java
 public class ServerApp {
   public static void main(String[] args) {
 
@@ -72,7 +71,8 @@ public class ServerApp {
 ```
 
 ## 03) 응답의 끝에는 빈 줄을 보내도록 응답 프로토콜을 정의한다.
-```
+
+```java
 public class ServerApp {
   public static void main(String[] args) {
 
@@ -112,7 +112,8 @@ public class ServerApp {
 
 ## 04) 다중 클라이언트 요청 처리 - 접속 순서대로 처리함
 - 클라이언트 요청이 끊어지면 다음 클라이언트와 연결하는 것을 반복한다.
-```
+
+```java
 public class ServerApp {
   public static void main(String[] args) {
 
@@ -158,7 +159,8 @@ public class ServerApp {
 ```
 
 - 클라이언트가 접속하거나 연결을 끊으면 로그를 남기도록 한다.
-```
+
+```java
 public class ServerApp {
   public static void main(String[] args) {
 
@@ -220,7 +222,7 @@ public class ServerApp {
     - `ServerApp` 클래스 변경
         - 클라이언트 요청 처리를 ClientHandler에게 맡긴다.
 
-```
+```java
 // 클라이언트 요청을 처리하는 일을 한다.
 public class ClientHandler implements Runnable {
   Socket socket;
@@ -268,7 +270,8 @@ public class ClientHandler implements Runnable {
 ```
 
 - 다중 클라이언트의 동시 접속을 처리한다.
-```
+
+```java
 public class ServerApp {
   public static void main(String[] args) {
 
@@ -294,7 +297,8 @@ public class ServerApp {
 ```
 
 - ClientHandler 클래스를 중첩 클래스로 만든다.
-```
+
+```java
 public class ServerApp {
   public static void main(String[] args) {
 
@@ -358,10 +362,11 @@ public class ServerApp {
 ```
 
 - 익명 클래스로 만든다.
-- 상속 + 내부 클래스
-- 클래스의 선언과 객체의 생성을 동시에 하기 때문에 단 한번만 사용될 수 있고 오직 하나의 객체만을 생성할 수 있는 일회용 클래스이다.
-- 재사용을 안할 것 같은 클래스를 익명 클래스로 만든다.
-```
+  - 상속 + 내부 클래스
+  - 클래스의 선언과 객체의 생성을 동시에 하기 때문에 단 한번만 사용될 수 있고 오직 하나의 객체만을 생성할 수 있는 일회용 클래스이다.
+  - 재사용을 안할 것 같은 클래스를 익명 클래스로 만든다.
+
+```java
 public class ServerApp {
   public static void main(String[] args) {
 
@@ -417,11 +422,11 @@ public class ServerApp {
 ```
 
 - 익명 클래스를 람다 문법으로 정의한다.
-    - 코드가 여러 블록에 중첩되면 될수록 들여쓰기를 하면서 코드를 읽기가 불편해진다.
-    - 익명 클래스의 코드를 바깥 클래스의 멤버로 만든 후 그 바깥 클래스의 멤버를 호출한다.
-    - 만약 익명 클래스가 메서드 한개짜리 인터페이스를 구현하고 그 코드도 간단하다면 람다 문법을 사용하면 간편하게 할 수 있다.
+  - 코드가 여러 블록에 중첩되면 될수록 들여쓰기를 하면서 코드를 읽기가 불편해진다.
+  - 익명 클래스의 코드를 바깥 클래스의 멤버로 만든 후 그 바깥 클래스의 멤버를 호출한다.
+  - 만약 익명 클래스가 메서드 한개짜리 인터페이스를 구현하고 그 코드도 간단하다면 람다 문법을 사용하면 간편하게 할 수 있다.
 
-```
+```java
 public class ServerApp {
   public static void main(String[] args) {
 
@@ -483,7 +488,8 @@ public class ServerApp {
 # Client
 
 ## 01) 간단한 메시지를 송수신 할 수 있도록 한다.
-```
+
+```java
 public class ClientApp {
   public static void main(String[] args) {
     // 서버주소 : localhost
@@ -507,7 +513,8 @@ public class ClientApp {
 
 ## 02) 사용자가 quit 명령을 입력할 때까지 반복한다.
 - com.eomcs.util 에 Prompt 클래스를 만든다.
-```
+
+```java
 public class Prompt {
   static Scanner keyboardScan = new Scanner(System.in);
 
@@ -534,7 +541,8 @@ public class Prompt {
 ```
 
 - ClientApp 에서 Prompt 를 사용해 명령을 입력받도록 한다.
-```
+
+```java
 public class ClientApp {
   public static void main(String[] args) {
     try (Socket socket = new Socket("localhost", 8888);
@@ -557,7 +565,8 @@ public class ClientApp {
 ```
 
 - quit 명령어를 입력받으면 종료하게 만든다.
-```
+
+```java
 public class ClientApp {
   public static void main(String[] args) {
     // 서버주소 : localhost
@@ -588,7 +597,8 @@ public class ClientApp {
 ```
 
 ## 03) 서버가 빈 줄을 보낼 때까지 응답을 읽는다.
-```
+
+```java
 public class ClientApp {
   public static void main(String[] args) {
     // 서버주소 : localhost
@@ -633,7 +643,7 @@ public class ClientApp {
 - 애플리케이션 아규먼트를 통해 서버의 주소와 포트 번호를 입력 받는다.
 - 다른 서버에 접속하기 위해서 주소와 포트 번호를 알아야 한다.
 
-```
+```java
 public class ClientApp {
   public static void main(String[] args) {
 
