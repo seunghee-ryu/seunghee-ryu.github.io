@@ -322,7 +322,7 @@ defaults:
     values:
       layout: single
       comments: true
-      # author_profile: true
+      author_profile: true
       # read_time: true
       # share: true
       related: true
