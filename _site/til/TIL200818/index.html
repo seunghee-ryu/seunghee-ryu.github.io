@@ -1,0 +1,648 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Queue, Stack - triple S</title>
+<meta name="description" content="2020-08-18 TLI">
+
+
+  <meta name="author" content="Seunghee Ryu">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="triple S">
+<meta property="og:title" content="Queue, Stack">
+<meta property="og:url" content="http://localhost:4000/til/TIL200818/">
+
+
+  <meta property="og:description" content="2020-08-18 TLI">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-08-18T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/til/TIL200818/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "seunghee ryu",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="triple S Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          triple S
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://seunghee-ryu.github.io/">블로그 방문하기</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#til" itemprop="item"><span itemprop="name">Til</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Queue, Stack</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Seunghee Ryu</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Somewhere</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="ryuseunghee.dev@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/seunghee-ryu/seunghee-ryu.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Queue, Stack">
+    <meta itemprop="description" content="2020-08-18 TLI">
+    <meta itemprop="datePublished" content="2020-08-18T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Queue, Stack
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="2020-08-18-tli">2020-08-18 TLI</h1>
+
+<h2 id="internationalization국제화-vs-localization지역화">Internationalization(국제화) vs Localization(지역화)</h2>
+<ul>
+  <li>약자 : i18n, l10n</li>
+  <li>한국어를 영어로 바꾸는 것이 국제화, 영어를 한국어로 바꾸는 것을 지역화라고 한다.</li>
+</ul>
+
+<h1 id="queue">Queue</h1>
+
+<h2 id="first-in-first-outfifo">First In First Out(FIFO)</h2>
+<ul>
+  <li>offer() 로 삽입한 값은 poll()을 통해 추출한다.</li>
+  <li>맨 처음 넣은 것이 가장 먼저 나오는 선입선출을 따른다.(긴 통에 한쪽 끝에선 공을 넣고 다른 쪽 끝에선 공을 꺼내는 형상)</li>
+  <li>peek()은 조회만 하고 poll()은 조회를 한 값을 지운다.</li>
+</ul>
+
+<h1 id="stack">Stack</h1>
+
+<h2 id="first-in-last-outfilo-혹은--last-in-first-outlifo">First In Last out(FILO) 혹은  Last In First Out(LIFO)</h2>
+<ul>
+  <li>push()로 삽입한 값은 pop()을 통해 추출한다.</li>
+  <li>맨 나중에 넣은 것이 가장 먼저 나오는 후입선출을 따른다.(입구와 출구가 한곳밖에 없다. 통 안에 판을 하나씩 넣었다가 꺼내는 형상)</li>
+</ul>
+
+<h1 id="hashset">HashSet</h1>
+<ul>
+  <li></li>
+</ul>
+
+<h1 id="hashmap">HashMap</h1>
+
+<h1 id="클래스-관계-주어-가-목적어-를-사용포함한다---의존-관계">클래스 관계 (주어 가 목적어 를 사용/포함한다.) - 의존 관계</h1>
+<ul>
+  <li>01) 상속</li>
+  <li>02) 연관(Association)
+    <ul>
+      <li>지속성이 있다.</li>
+      <li>사용체에서 피사용체로 화살표를 그린다.</li>
+      <li>목적어를 사용하기 때문에 목적어 없이는 주어가 성립하지 않는다.</li>
+    </ul>
+  </li>
+  <li>03) 집합(Aggregation)
+    <ul>
+      <li>사용체(빈 마름모)에서 피사용체로 화살표를 그린다.</li>
+      <li>lifecycle이 다르다.
+        <ul>
+          <li>예) 컴퓨터와 모니터, 마우스, 키보드.</li>
+          <li>예) 사람과 핸드폰.</li>
+          <li>컨테이너가 사라질 때 아이템은 남는다.</li>
+        </ul>
+      </li>
+      <li>포함관계 (주어 가 목적어 를 포함한다. 능동목적어 쪽으로 화살표가 간다.)</li>
+    </ul>
+  </li>
+  <li>04) 합성(Compositon)
+    <ul>
+      <li>사용체(채워진 마름모)에서 피사용체로 화살표를 그린다.</li>
+      <li>lifecycle이 같다.
+        <ul>
+          <li>예) 컴퓨터와 메인보드, 파워서플라이.</li>
+          <li>예) 사람과 심장.</li>
+          <li>링크드리스트 -&gt; 노드</li>
+          <li>컨테이너가 사라질 때 아이템도 사라진다.</li>
+        </ul>
+      </li>
+      <li>포함관계 (주어 가 목적어 를 포함한다. 능동목적어 쪽으로 화살표가 간다.)</li>
+    </ul>
+  </li>
+  <li>05) 의존(Dependency)
+    <ul>
+      <li>사용체에서 피사용체로 실선으로 화살표를 그린다.</li>
+      <li>특정 메소드에서만 사용되는 관계(기능을 사용하려면 일시적으로 의존하는 수 밖에 없다.)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="의존객체쓰임을-당하는-객체">의존객체(쓰임을 당하는 객체)</h2>
+<ul>
+  <li>의존 관계에서 사용을 당하는 객체를 의존객체(Dependency Object)라고 한다.</li>
+</ul>
+
+<h1 id="동기화와-비동기화">동기화와 비동기화</h1>
+<ul>
+  <li>동기화가 되어 있으면 하나의 스레드가 특정 코드에 접속할 때 락으로 잠근다.</li>
+  <li>작업을 끝내고 락을 풀면 다른 스레드가 접속할 수 있다.</li>
+  <li>StringBuilder는 동기화가 되어 있지만 No guarantee이다.(다른 스레드가 접속해서 문자열을 추가하는 것을 막지 않는다.)</li>
+  <li>로컬 변수일 경우는 여러 스레드가 접속할 수 없기 때문에 StringBuffer(락을 걸고 개런티가 있음)가 아니라 StringBuilder로 충분하다.</li>
+</ul>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#til" class="page__taxonomy-item" rel="tag">TIL</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-08-18T00:00:00+09:00">August 18, 2020</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/howto/HowtoMakeLinkedList01/" class="pagination--pager" title="How to make LinkedList 01
+">이전</a>
+    
+    
+      <a href="/howto/Queue/" class="pagination--pager" title="About Queue
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/TIL201026/" rel="permalink">2020-10-26 TIL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">stateful, stateless
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/TIL201023/" rel="permalink">2020-10-23 TIL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">커밋 메시지 스타일 가이드
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/TIL201022/" rel="permalink">2020-10-22 TIL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">챗봇 기반 방탈출 게임 만들기
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/TIL201021/" rel="permalink">2020-10-21 TIL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">MariaDB, MySQL
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 seunghee ryu. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

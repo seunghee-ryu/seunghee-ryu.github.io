@@ -1,0 +1,965 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.20.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>mini-pms 33a - triple S</title>
+<meta name="description" content="Observer 패턴 적용">
+
+
+  <meta name="author" content="Seunghee Ryu">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="triple S">
+<meta property="og:title" content="mini-pms 33a">
+<meta property="og:url" content="http://localhost:4000/pms/mini-pms-33a/">
+
+
+  <meta property="og:description" content="Observer 패턴 적용">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-10-19T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/pms/mini-pms-33a/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "seunghee ryu",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="triple S Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          triple S
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://seunghee-ryu.github.io/">블로그 방문하기</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#pms" itemprop="item"><span itemprop="name">Pms</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">mini-pms 33a</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Seunghee Ryu</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Somewhere</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="ryuseunghee.dev@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/seunghee-ryu/seunghee-ryu.github.io" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="mini-pms 33a">
+    <meta itemprop="description" content="Observer 패턴 적용">
+    <meta itemprop="datePublished" content="2020-10-19T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">mini-pms 33a
+</h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="observer-패턴-적용">Observer 패턴 적용</h1>
+
+<h2 id="01-app-클래스의-스태틱-멤버필드와-메서드를-인스턴트-멤버로-전환한다">01) App 클래스의 스태틱 멤버(필드와 메서드)를 인스턴트 멤버로 전환한다.</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="nc">App01</span> <span class="n">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">App01</span><span class="o">();</span>
+    <span class="n">app</span><span class="o">.</span><span class="na">service</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="c1">// 스태틱 멤버들이 공유하는 변수가 아니라면 로컬 변수로 만든다.</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">service</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Board</span><span class="o">&gt;</span> <span class="n">boardList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">File</span> <span class="n">boardFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"./board.json"</span><span class="o">);</span>
+
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="n">memberList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">File</span> <span class="n">memberFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"./member.json"</span><span class="o">);</span> 
+
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Project</span><span class="o">&gt;</span> <span class="n">projectList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">File</span> <span class="n">projectFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"./project.json"</span><span class="o">);</span> 
+
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Task</span><span class="o">&gt;</span> <span class="n">taskList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">File</span> <span class="n">taskFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"./task.json"</span><span class="o">);</span>
+
+    <span class="n">loadObjects</span><span class="o">(</span><span class="n">boardList</span><span class="o">,</span> <span class="n">boardFile</span><span class="o">,</span> <span class="nc">Board</span><span class="o">[].</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">loadObjects</span><span class="o">(</span><span class="n">memberList</span><span class="o">,</span> <span class="n">memberFile</span><span class="o">,</span> <span class="nc">Member</span><span class="o">[].</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">loadObjects</span><span class="o">(</span><span class="n">projectList</span><span class="o">,</span> <span class="n">projectFile</span><span class="o">,</span> <span class="nc">Project</span><span class="o">[].</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">loadObjects</span><span class="o">(</span><span class="n">taskList</span><span class="o">,</span> <span class="n">taskFile</span><span class="o">,</span> <span class="nc">Task</span><span class="o">[].</span><span class="na">class</span><span class="o">);</span>
+
+    <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Command</span><span class="o">&gt;</span> <span class="n">commandMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/add"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardAddCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/list"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardListCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/detail"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardDetailCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/update"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardUpdateCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/delete"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardDeleteCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+
+    <span class="nc">MemberListCommand</span> <span class="n">memberListCommand</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MemberListCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">);</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/add"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">MemberAddCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/list"</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">);</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/detail"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">MemberDetailCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/update"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">MemberUpdateCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/delete"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">MemberDeleteCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">));</span>
+
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/add"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectAddCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/list"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectListCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/detail"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectDetailCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/update"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectUpdateCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/delete"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectDeleteCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">));</span>
+
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/add"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskAddCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/list"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskListCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/detail"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskDetailCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/update"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskUpdateCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/delete"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskDeleteCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">));</span>
+
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/hello"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">HelloCommand</span><span class="o">());</span>
+
+    <span class="nc">Deque</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">commandStack</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayDeque</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">commandQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+
+    <span class="nl">loop:</span>
+      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">inputStr</span> <span class="o">=</span> <span class="nc">Prompt</span><span class="o">.</span><span class="na">inputString</span><span class="o">(</span><span class="s">"명령&gt; "</span><span class="o">);</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">inputStr</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+          <span class="k">continue</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="n">commandStack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>
+        <span class="n">commandQueue</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>
+
+        <span class="k">switch</span> <span class="o">(</span><span class="n">inputStr</span><span class="o">)</span> <span class="o">{</span>
+          <span class="k">case</span> <span class="s">"history"</span><span class="o">:</span> <span class="n">printCommandHistory</span><span class="o">(</span><span class="n">commandStack</span><span class="o">.</span><span class="na">iterator</span><span class="o">());</span> <span class="k">break</span><span class="o">;</span>
+          <span class="k">case</span> <span class="s">"history2"</span><span class="o">:</span> <span class="n">printCommandHistory</span><span class="o">(</span><span class="n">commandQueue</span><span class="o">.</span><span class="na">iterator</span><span class="o">());</span> <span class="k">break</span><span class="o">;</span>
+          <span class="k">case</span> <span class="s">"quit"</span><span class="o">:</span>
+          <span class="k">case</span> <span class="s">"exit"</span><span class="o">:</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"안녕!"</span><span class="o">);</span>
+            <span class="k">break</span> <span class="n">loop</span><span class="o">;</span>
+          <span class="k">default</span><span class="o">:</span>
+            <span class="nc">Command</span> <span class="n">command</span> <span class="o">=</span> <span class="n">commandMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">command</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+              <span class="k">try</span> <span class="o">{</span>
+                <span class="n">command</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+              <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"--------------------------------------------------------------"</span><span class="o">);</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"명령어 실행 중 오류 발생: %s\n"</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"--------------------------------------------------------------"</span><span class="o">);</span>
+              <span class="o">}</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+              <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"실행할 수 없는 명령입니다."</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+      <span class="o">}</span>
+
+    <span class="nc">Prompt</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+
+    <span class="n">saveObjects</span><span class="o">(</span><span class="n">boardList</span><span class="o">,</span> <span class="n">boardFile</span><span class="o">);</span>
+    <span class="n">saveObjects</span><span class="o">(</span><span class="n">memberList</span><span class="o">,</span> <span class="n">memberFile</span><span class="o">);</span>
+    <span class="n">saveObjects</span><span class="o">(</span><span class="n">projectList</span><span class="o">,</span> <span class="n">projectFile</span><span class="o">);</span>
+    <span class="n">saveObjects</span><span class="o">(</span><span class="n">taskList</span><span class="o">,</span> <span class="n">taskFile</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  
+  <span class="c1">// 스태틱 멤버들이 공유하는 변수가 아니라면 로컬 변수로 만든다.</span>
+  <span class="kt">void</span> <span class="nf">printCommandHistory</span><span class="o">(</span><span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">iterator</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+      <span class="k">while</span> <span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">());</span>
+        <span class="n">count</span><span class="o">++;</span>
+
+        <span class="k">if</span> <span class="o">((</span><span class="n">count</span> <span class="o">%</span> <span class="mi">5</span><span class="o">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nc">Prompt</span><span class="o">.</span><span class="na">inputString</span><span class="o">(</span><span class="s">":"</span><span class="o">).</span><span class="na">equalsIgnoreCase</span><span class="o">(</span><span class="s">"q"</span><span class="o">))</span> <span class="o">{</span>
+          <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"history 명령 처리 중 오류 발생!"</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  
+  <span class="c1">// 스태틱 멤버들이 공유하는 변수가 아니라면 로컬 변수로 만든다.</span>
+  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">saveObjects</span><span class="o">(</span><span class="nc">Collection</span><span class="o">&lt;?&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">BufferedWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileWriter</span><span class="o">(</span><span class="n">file</span><span class="o">));</span>
+
+      <span class="nc">Gson</span> <span class="n">gson</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Gson</span><span class="o">();</span>
+      <span class="nc">String</span> <span class="n">jsonStr</span> <span class="o">=</span> <span class="n">gson</span><span class="o">.</span><span class="na">toJson</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+      <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">jsonStr</span><span class="o">);</span>
+
+      <span class="n">out</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
+
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"총 %d 개의 객체를 '%s' 파일에 저장했습니다.\n"</span><span class="o">,</span>
+          <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">(),</span> <span class="n">file</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"객체를 '%s' 파일에  쓰는 중 오류 발생! - %s\n"</span><span class="o">,</span>
+          <span class="n">file</span><span class="o">.</span><span class="na">getName</span><span class="o">(),</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  
+  <span class="c1">// 스태틱 멤버들이 공유하는 변수가 아니라면 로컬 변수로 만든다.</span>
+  <span class="kd">private</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="kt">void</span> <span class="nf">loadObjects</span><span class="o">(</span>
+      <span class="nc">Collection</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">,</span> <span class="c1">// 객체를 담을 컬렉션</span>
+      <span class="nc">File</span> <span class="n">file</span><span class="o">,</span> <span class="c1">// JSON 문자열이 저장된 파일</span>
+      <span class="nc">Class</span><span class="o">&lt;</span><span class="no">T</span><span class="o">[]&gt;</span> <span class="n">clazz</span> <span class="c1">// JSON 문자열을 어떤 타입의 배열로 만들 것인지 알려주는 클래스 정보</span>
+      <span class="o">)</span> <span class="o">{</span>
+    <span class="nc">BufferedReader</span> <span class="n">in</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileReader</span><span class="o">(</span><span class="n">file</span><span class="o">));</span>
+      <span class="n">list</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="k">new</span> <span class="nc">Gson</span><span class="o">().</span><span class="na">fromJson</span><span class="o">(</span><span class="n">in</span><span class="o">,</span> <span class="n">clazz</span><span class="o">)));</span>
+
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"'%s' 파일에서 총 %d 개의 객체를 로딩했습니다.\n"</span><span class="o">,</span>
+          <span class="n">file</span><span class="o">.</span><span class="na">getName</span><span class="o">(),</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"'%s' 파일 읽기 중 오류 발생! - %s\n"</span><span class="o">,</span>
+          <span class="n">file</span><span class="o">.</span><span class="na">getName</span><span class="o">(),</span> <span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+
+    <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+        <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="02-애플리케이션을-시작하거나-종료할-때-실행할-옵저버의-메서드-호출-규칙을-정의한다">02) 애플리케이션을 시작하거나 종료할 때 실행할 옵저버의 메서드 호출 규칙을 정의한다.</h2>
+<ul>
+  <li>com.eomcs.context.ApplicationContextListener 생성</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 애플리케이션의 상태가 변경되었을 때 호출할 메서드 규칙을 정의한다.</span>
+<span class="c1">// 즉 애플리케이션 상태 변경에 대해 보고를 받을 "Observer" 규칙을 정의한다.</span>
+<span class="c1">// 보통 옵저버를 "리스너(listener)/구독자(subscriber)"라 부른다.</span>
+
+<span class="kd">public</span> <span class="kd">interface</span> <span class="nc">ApplicationContextListener</span> <span class="o">{</span>
+  <span class="c1">// 발행자(애플리케이션)가 애플리케이션 시작을 알리기 위해 호출하는 메서드</span>
+  <span class="kt">void</span> <span class="nf">contextInitialized</span><span class="o">();</span>
+
+  <span class="c1">// 발행자(애플리케이션)가 애플리케이션 종료를 알리기 위해 호출하는 메서드</span>
+  <span class="kt">void</span> <span class="nf">contextDestroyed</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="03-옵저버를-저장할-컬렉션-객체와-옵저버를-추가하고-제거하는-메서드를-추가한다">03) 옵저버를 저장할 컬렉션 객체와 옵저버를 추가하고 제거하는 메서드를 추가한다.</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+
+  <span class="c1">// 옵저버를 보관할 컬렉션 객체</span>
+  <span class="nc">List</span><span class="o">&lt;</span><span class="nc">ApplicationContextListener</span><span class="o">&gt;</span> <span class="n">listeners</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+  <span class="c1">// 옵저버를 등록하는 메서드</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addApplicationContextListener</span><span class="o">(</span><span class="nc">ApplicationContextListener</span> <span class="n">listener</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">listeners</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">listener</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="c1">// 옵저버를 제거하는 메서드</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeApplicationContextListener</span><span class="o">(</span><span class="nc">ApplicationContextListener</span> <span class="n">listener</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">listeners</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">listener</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="nc">App</span> <span class="n">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">App</span><span class="o">();</span>
+    <span class="n">app</span><span class="o">.</span><span class="na">service</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="04-애플리케이션의-service-실행-전후에-옵저버에게-통지하는-코드를-추가한다">04) 애플리케이션의 service() 실행 전/후에 옵저버에게 통지하는 코드를 추가한다.</h2>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+
+  <span class="nc">List</span><span class="o">&lt;</span><span class="nc">ApplicationContextListener</span><span class="o">&gt;</span> <span class="n">listeners</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addApplicationContextListener</span><span class="o">(</span><span class="nc">ApplicationContextListener</span> <span class="n">listener</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">listeners</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">listener</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeApplicationContextListener</span><span class="o">(</span><span class="nc">ApplicationContextListener</span> <span class="n">listener</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">listeners</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">listener</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="c1">// service() 실행 전에 옵저버에게 통지한다.</span>
+  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">notifyApplicationContextListenerOnServiceStarted</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// 곧 서비스를 시작할테니 준비하라고, 서비스 시작에 관심있는 각 옵저버에게 통지한다.</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">ApplicationContextListener</span> <span class="n">listener</span> <span class="o">:</span> <span class="n">listeners</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">listener</span><span class="o">.</span><span class="na">contextInitialized</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// service() 실행 후에 옵저버에게 통지한다.</span>
+  <span class="kd">private</span> <span class="kt">void</span> <span class="nf">notifyApplicationContextListenerOnServiceStopped</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// 서비스가 종료되었으니 마무리 작업하라고, 마무리 작업에 관심있는 각 옵저버에게 통지한다.</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">ApplicationContextListener</span> <span class="n">listener</span> <span class="o">:</span> <span class="n">listeners</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">listener</span><span class="o">.</span><span class="na">contextDestroyed</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="nc">App</span> <span class="n">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">App</span><span class="o">();</span>
+    <span class="n">app</span><span class="o">.</span><span class="na">service</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">service</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+
+    <span class="c1">// 옵저버에게 통지한다.</span>
+    <span class="n">notifyApplicationContextListenerOnServiceStarted</span><span class="o">();</span>
+
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Board</span><span class="o">&gt;</span> <span class="n">boardList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">File</span> <span class="n">boardFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"./board.json"</span><span class="o">);</span> 
+
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Member</span><span class="o">&gt;</span> <span class="n">memberList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">File</span> <span class="n">memberFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"./member.json"</span><span class="o">);</span> 
+
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Project</span><span class="o">&gt;</span> <span class="n">projectList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">File</span> <span class="n">projectFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"./project.json"</span><span class="o">);</span> 
+
+    <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Task</span><span class="o">&gt;</span> <span class="n">taskList</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">File</span> <span class="n">taskFile</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"./task.json"</span><span class="o">);</span> 
+
+    <span class="n">loadObjects</span><span class="o">(</span><span class="n">boardList</span><span class="o">,</span> <span class="n">boardFile</span><span class="o">,</span> <span class="nc">Board</span><span class="o">[].</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">loadObjects</span><span class="o">(</span><span class="n">memberList</span><span class="o">,</span> <span class="n">memberFile</span><span class="o">,</span> <span class="nc">Member</span><span class="o">[].</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">loadObjects</span><span class="o">(</span><span class="n">projectList</span><span class="o">,</span> <span class="n">projectFile</span><span class="o">,</span> <span class="nc">Project</span><span class="o">[].</span><span class="na">class</span><span class="o">);</span>
+    <span class="n">loadObjects</span><span class="o">(</span><span class="n">taskList</span><span class="o">,</span> <span class="n">taskFile</span><span class="o">,</span> <span class="nc">Task</span><span class="o">[].</span><span class="na">class</span><span class="o">);</span>
+
+    <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span><span class="nc">Command</span><span class="o">&gt;</span> <span class="n">commandMap</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/add"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardAddCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/list"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardListCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/detail"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardDetailCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/update"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardUpdateCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/board/delete"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">BoardDeleteCommand</span><span class="o">(</span><span class="n">boardList</span><span class="o">));</span>
+
+    <span class="nc">MemberListCommand</span> <span class="n">memberListCommand</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MemberListCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">);</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/add"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">MemberAddCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/list"</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">);</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/detail"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">MemberDetailCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/update"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">MemberUpdateCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/member/delete"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">MemberDeleteCommand</span><span class="o">(</span><span class="n">memberList</span><span class="o">));</span>
+
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/add"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectAddCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/list"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectListCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/detail"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectDetailCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/update"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectUpdateCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/project/delete"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">ProjectDeleteCommand</span><span class="o">(</span><span class="n">projectList</span><span class="o">));</span>
+
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/add"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskAddCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/list"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskListCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/detail"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskDetailCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/update"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskUpdateCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">,</span> <span class="n">memberListCommand</span><span class="o">));</span>
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/task/delete"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TaskDeleteCommand</span><span class="o">(</span><span class="n">taskList</span><span class="o">));</span>
+
+    <span class="n">commandMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"/hello"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">HelloCommand</span><span class="o">());</span>
+
+    <span class="nc">Deque</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">commandStack</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayDeque</span><span class="o">&lt;&gt;();</span>
+    <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">commandQueue</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
+
+    <span class="nl">loop:</span>
+      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">inputStr</span> <span class="o">=</span> <span class="nc">Prompt</span><span class="o">.</span><span class="na">inputString</span><span class="o">(</span><span class="s">"명령&gt; "</span><span class="o">);</span>
+
+        <span class="k">if</span> <span class="o">(</span><span class="n">inputStr</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+          <span class="k">continue</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="n">commandStack</span><span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>
+        <span class="n">commandQueue</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>
+
+        <span class="k">switch</span> <span class="o">(</span><span class="n">inputStr</span><span class="o">)</span> <span class="o">{</span>
+          <span class="k">case</span> <span class="s">"history"</span><span class="o">:</span> <span class="n">printCommandHistory</span><span class="o">(</span><span class="n">commandStack</span><span class="o">.</span><span class="na">iterator</span><span class="o">());</span> <span class="k">break</span><span class="o">;</span>
+          <span class="k">case</span> <span class="s">"history2"</span><span class="o">:</span> <span class="n">printCommandHistory</span><span class="o">(</span><span class="n">commandQueue</span><span class="o">.</span><span class="na">iterator</span><span class="o">());</span> <span class="k">break</span><span class="o">;</span>
+          <span class="k">case</span> <span class="s">"quit"</span><span class="o">:</span>
+          <span class="k">case</span> <span class="s">"exit"</span><span class="o">:</span>
+            <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"안녕!"</span><span class="o">);</span>
+            <span class="k">break</span> <span class="n">loop</span><span class="o">;</span>
+          <span class="k">default</span><span class="o">:</span>
+            <span class="nc">Command</span> <span class="n">command</span> <span class="o">=</span> <span class="n">commandMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>
+            <span class="k">if</span> <span class="o">(</span><span class="n">command</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+              <span class="k">try</span> <span class="o">{</span>
+                <span class="n">command</span><span class="o">.</span><span class="na">execute</span><span class="o">();</span>
+              <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"--------------------------------------------------------------"</span><span class="o">);</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"명령어 실행 중 오류 발생: %s\n"</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+                <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"--------------------------------------------------------------"</span><span class="o">);</span>
+              <span class="o">}</span>
+            <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+              <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"실행할 수 없는 명령입니다."</span><span class="o">);</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+      <span class="o">}</span>
+
+    <span class="nc">Prompt</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+
+    <span class="n">saveObjects</span><span class="o">(</span><span class="n">boardList</span><span class="o">,</span> <span class="n">boardFile</span><span class="o">);</span>
+    <span class="n">saveObjects</span><span class="o">(</span><span class="n">memberList</span><span class="o">,</span> <span class="n">memberFile</span><span class="o">);</span>
+    <span class="n">saveObjects</span><span class="o">(</span><span class="n">projectList</span><span class="o">,</span> <span class="n">projectFile</span><span class="o">);</span>
+    <span class="n">saveObjects</span><span class="o">(</span><span class="n">taskList</span><span class="o">,</span> <span class="n">taskFile</span><span class="o">);</span>
+
+    <span class="c1">// 옵저버에게 통지한다.</span>
+    <span class="n">notifyApplicationContextListenerOnServiceStopped</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="05-애플리케이션을-시작하고-종료할-때-간단한-안내-메시지를-출력하는-옵저버를-추가한다">05) 애플리케이션을 시작하고 종료할 때 간단한 안내 메시지를 출력하는 옵저버를 추가한다.</h2>
+<ul>
+  <li>com.eomcs.pms.listener.AppInitListener 클래스 생성</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">AppInitListener</span> <span class="kd">implements</span> <span class="nc">ApplicationContextListener</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">contextInitialized</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"프로젝트 관리 시스템(PMS)에 오신 걸 환영합니다!"</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">contextDestroyed</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"프로젝트 관리 시스템(PMS)을 종료합니다!"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>service() 호출 전에 옵저버를 등록한다.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App04</span> <span class="o">{</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+  <span class="nc">App04</span> <span class="n">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">App04</span><span class="o">();</span>
+
+  <span class="c1">// 안내 메시지를 출력하는 옵저버 등록</span>
+  <span class="n">app</span><span class="o">.</span><span class="na">addApplicationContextListener</span><span class="o">(</span><span class="k">new</span> <span class="nc">AppInitListener</span><span class="o">());</span>
+
+  <span class="n">app</span><span class="o">.</span><span class="na">service</span><span class="o">();</span>
+<span class="o">}</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#pms" class="page__taxonomy-item" rel="tag">pms</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time datetime="2020-10-19T00:00:00+09:00">October 19, 2020</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/til/TIL2010019/" class="pagination--pager" title="2020-10-19 TIL
+">이전</a>
+    
+    
+      <a href="/pms/mini-pms-33b/" class="pagination--pager" title="mini-pms 33b
+">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">참고</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/TIL201026/" rel="permalink">2020-10-26 TIL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">stateful, stateless
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/TIL201023/" rel="permalink">2020-10-23 TIL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">커밋 메시지 스타일 가이드
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/TIL201022/" rel="permalink">2020-10-22 TIL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">챗봇 기반 방탈출 게임 만들기
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/til/TIL201021/" rel="permalink">2020-10-21 TIL
+</a>
+      
+    </h2>
+    
+
+
+    <p class="archive__item-excerpt" itemprop="description">MariaDB, MySQL
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="검색어를 입력하세요..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 seunghee ryu. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
