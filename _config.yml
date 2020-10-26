@@ -40,10 +40,10 @@ minimal_mistakes_skin    : "dark" #"default" # "air", "aqua", "contrast", "dark"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Study"
+title                    : "triple S"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "타래"
+name                     : "seunghee ryu"
 description              : "recording"
 url                      : "https://seunghee-ryu.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -62,7 +62,7 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
+    num_posts            : 10 # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
@@ -119,13 +119,13 @@ analytics:
 author:
   name             : "Seunghee Ryu"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : # ""
+  bio              : "" # ""
   location         : "Somewhere"
-  email            :
+  email            : "ryuseunghee.dev@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "shee.ryu88@gmail.com"
+      url: "ryuseunghee.dev@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
