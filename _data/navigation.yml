@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "Tags"
-    url: /tags/
+  - title: about
+    url: https://github.com/seunghee-ryu/seunghee-ryu/blob/main/README.md
   - title: "Categories"
     url: /categories/
   # - title: "Quick-Start Guide"
