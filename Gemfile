@@ -15,9 +15,7 @@ gem "github-pages", group: :jekyll_plugins
 
 gem "jekyll"
 gem "minimal-mistakes-jekyll"
-gem "jekyll", "~> 3.6.2"
-gem "github-pages", "~> 168"
-gem "rake", "~> 12.3.0"
+
 # The following plugins are automatically loaded by the theme-gem:
 #   gem "jekyll-paginate"
 #   gem "jekyll-sitemap"
@@ -27,12 +25,4 @@ gem "rake", "~> 12.3.0"
 #
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
-    gem "jekyll-paginate"
-    gem "jekyll-sitemap"
-    gem "jekyll-gist"
-    gem "jekyll-feed"
-    gem "jemoji"
-    gem "jekyll-algolia"
-    gem "jekyll-feed"
-    gem "jekyll-seo-tag"
 end
