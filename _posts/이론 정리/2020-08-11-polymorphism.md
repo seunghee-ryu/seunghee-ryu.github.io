@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "다형성"
+title:  "다형성(polymorphism)"
 categories: java basic
 layout : single
 ---

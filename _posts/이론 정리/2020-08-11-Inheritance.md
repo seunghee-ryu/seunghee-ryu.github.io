@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "상속"
+title:  "상속(Inheritance)"
 categories: java basic
 layout : single
 ---

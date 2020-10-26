@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ArrayList, LinkedList"
-categories: TIL
+categories: java Basic
 layout : single
 ---
 

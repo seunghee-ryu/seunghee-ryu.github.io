@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Encapsulation"
+title:  "캡슐화(Encapsulation)"
 categories: java basic
 layout : single
 ---
