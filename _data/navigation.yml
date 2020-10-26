@@ -1,7 +1,7 @@
 # main links
 main:
-  # - title: "about"
-  #   url: /about/
+   - title: "posts"
+     url: /posts/
   - title: "Categories"
     url: /categories/
   - title: "github readme"
