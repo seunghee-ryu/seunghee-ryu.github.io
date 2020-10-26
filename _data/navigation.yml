@@ -1,9 +1,11 @@
 # main links
 main:
-  - title: "about"
-    url: https://github.com/seunghee-ryu/seunghee-ryu/blob/main/README.md
+  # - title: "about"
+  #   url: /about/
   - title: "Categories"
     url: /categories/
+  - title: "github readme"
+    url: https://github.com/seunghee-ryu/seunghee-ryu/blob/main/README.md
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
