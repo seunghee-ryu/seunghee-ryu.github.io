@@ -288,4 +288,4 @@ defaults:
       layout: single
       author_profile: true
 
-Front Matter toc: true
+Front Matter toc : true
