@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "캡슐화(Encapsulation)"
-categories: java basic
+categories: Basic
 layout : single
 toc : true 
 toc_sticky : true

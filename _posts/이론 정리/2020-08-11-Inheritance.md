@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "상속(Inheritance)"
-categories: java basic
+categories: Basic
 layout : single
 toc : true 
 toc_sticky : true

@@ -1,7 +1,7 @@
 ---
 layout : post
 title :  "main page sidebar"
-categories : github blog
+categories : blogConfig
 layout : single
 toc : true 
 toc_sticky : true

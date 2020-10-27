@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "다형성(polymorphism)"
-categories: java basic
+categories: Basic
 layout : single
 toc : true 
 toc_sticky : true

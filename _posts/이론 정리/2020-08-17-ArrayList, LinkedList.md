@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ArrayList, LinkedList"
-categories: java Basic
+categories: Basic
 layout : single
 toc : true 
 toc_sticky : true
