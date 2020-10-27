@@ -3,6 +3,8 @@ layout: post
 title:  "캡슐화(Encapsulation)"
 categories: java basic
 layout : single
+toc : true 
+toc_sticky : true
 ---
 
 # 2020-08-12 TLI

@@ -3,6 +3,8 @@ layout: post
 title:  "데이터 타입(Data Type)"
 categories: java basic
 layout : single
+toc : true 
+toc_sticky : true
 ---
 
 # 기본 데이터 타입(primitive type)

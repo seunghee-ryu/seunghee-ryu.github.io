@@ -3,6 +3,8 @@ layout: post
 title:  "ArrayList, LinkedList"
 categories: java Basic
 layout : single
+toc : true 
+toc_sticky : true
 ---
 
 # 2020-08-17 TLI

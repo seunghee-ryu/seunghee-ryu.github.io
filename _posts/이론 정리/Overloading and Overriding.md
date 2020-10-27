@@ -3,6 +3,8 @@ layout: post
 title:  "Overloading and Overriding"
 categories: java basic
 layout : single
+toc : true 
+toc_sticky : true
 ---
 # 2020-08-12 TLI
 

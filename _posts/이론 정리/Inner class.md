@@ -3,6 +3,8 @@ layout: post
 title:  "내부 클래스 (Inner class)"
 categories: java basic
 layout : single
+toc : true 
+toc_sticky : true
 ---
 
 # Inner class

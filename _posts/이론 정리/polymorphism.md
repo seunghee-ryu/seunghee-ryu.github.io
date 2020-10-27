@@ -3,6 +3,8 @@ layout: post
 title:  "다형성(polymorphism)"
 categories: java basic
 layout : single
+toc : true 
+toc_sticky : true
 ---
 
 # 2020-08-11 TLI

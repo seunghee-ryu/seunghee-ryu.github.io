@@ -3,6 +3,8 @@ layout: post
 title:  "상속(Inheritance)"
 categories: java basic
 layout : single
+toc : true 
+toc_sticky : true
 ---
 
 # 2020-08-11 TLI

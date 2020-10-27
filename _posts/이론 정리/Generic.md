@@ -3,6 +3,8 @@ layout: post
 title:  "제네릭(Generic)"
 categories: java basic
 layout : single
+toc : true 
+toc_sticky : true
 ---
 
 # Generic
