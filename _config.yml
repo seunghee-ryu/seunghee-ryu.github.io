@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Large R"
+title                    : "희희:)"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Seunghee Ryu"
@@ -95,13 +95,13 @@ analytics:
 author:
   name             : "Seunghee Ryu"
   avatar           : "/assets/images/minibio.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : ""
+  bio              : "하루 하루 배우는 것을 기록합니다."
   location         : "Suwon, Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "ryuseunghee.dev@gmail.com"
+    #  url: "ryuseunghee.dev@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
