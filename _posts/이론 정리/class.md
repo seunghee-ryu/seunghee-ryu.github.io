@@ -169,59 +169,28 @@ toc_sticky : true
 ```java
 package com.eomcs.oop.ex01;
 
-// # 패키지 멤버 클래스와 중첩 클래스
-//
-
 // 패키지 멤버 클래스
-// - 단독으로 선언하는 클래스이다.
-// - "패키지 멤버 클래스"라 부른다.
-// - 물론 이 예제처럼 한 파일에 여러 개의 클래스를 선언할 수 있지만,
-//   보통은 한 파일에 한 클래스를 선얺나다.
-// - 패키지 멤버 클래스는 접근 권한이 있다면 누구든 사용할 수 있다.
-//
 // bin/main/com/eomcs/oop/ex01/A.class
 class A {}
 
 // => bin/main/com/eomcs/oop/ex01/Exam0420.class
 public class Exam0510 {
 
-  // 중첩 클래스(nested class)
-  // - 다른 클래스 안에 정의된 클래스
-  // - 그 클래스 안에서만 사용된다.
-  // - 종류:
-  //   1) 스태틱 중첩 클래스(static nested class)
-  //   2) 논-스태틱 중첩 클래스(non-static nested class = inner class)
-  //   3) 로컬 클래스(local class)
-  //   4) 익명 클래스(anonymous class)
-  //
-
   // 1) 스태틱 중첩 클래스
-  // - 이 클래스를 소유하고 있는 클래스 뿐만 아니라 다른 클래스도 사용할 수 있다.
-  //
   // bin/main/com/eomcs/oop/ex01/Exam0420$B.class
   static class B {}
 
   // 2) 논-스태틱 중첩 클래스
-  // - 특정 인스턴스에 종속된 클래스인 경우 논-스태틱 중첩 클래스로 정의한다.
-  //
   // bin/main/com/eomcs/oop/ex01/Exam0420$C.class
   class C {}
 
 
   public static void main(String[] args) {
     // 3) 로컬 클래스(local class)
-    // - 메서드 블록 안에 정의된 클래스
-    // - 오직 그 메서드 블록 안에서만 사용된다.
-    //
     // bin/main/com/eomcs/oop/ex01/Exam0420$1D.class
     class D {}
 
     // 4) 익명 클래스(anonymouse class)
-    // - 클래스 이름이 없는 중첩 클래스이다.
-    // - 딱 한 개의 인스턴스를 생성할 때 사용한다.
-    // - 클래스를 정의할 때 수퍼 클래스나 인터페이스를 지정해야 한다.
-    // - 클래스를 정의할 때 new 연산자를 사용하여 즉시 인스턴스를 생성해야 한다.
-    //
     // bin/main/com/eomcs/oop/ex01/Exam0420$1.class
     Object obj = new Object() {
       String name;
@@ -263,3 +232,41 @@ public class Exam0510 {
 }
 ```
 
+## 퍼블릭 클래스와 기본 클래스
+- 같은 패키지에 소속된 클래스 사용
+    - 공개, 비공개 상관없이 사용할 수 있다.
+- 다른 패키지에 소속된 클래스 사용
+    - 다른 패키지의 클래스는 퍼블릭이 아니면 사용할 수 없다.
+    - 퍼블릭으로 공개된 클래스는 다른 패키지에 소속되어 있어도 사용할 수 있다.
+
+## import
+- 다른 패키지의 클래스를 사용할 때 마다 패키지명을 적어야 한다면 코드가 너무 길어진다.
+- 이러한 문제점을 해결하기 위해 import 라는 명령을 사용해서 클래스를 사용하기 전에 미리 해당 클래스가 어느 패키지에 있는지 명시한다.
+- 특정 패키지의 클래스를 많이 사용한다면 패키지명 다음에 *를 붙여도 된다.
+    - 하지만 가능한 사용하지 않는다.
+
+## java.lang 패키지
+- java.lang 패키지에 있는 클래스는 패키지를 지정하지 않아도 된다.
+    - 즉, 패키지명을 명시하지 않아도 컴파일 오류가 발생하지 않는다.
+- 주의
+    - java.lang 패키지의 하위 패키지는 해당되지 않는다.
+- java.lang 패키지의 클래스들은 갖아 많이 사용하는 기본 클래스이기 때문에 자바 컴파일러가 해당 클래스를 자동으로 찾는다.
+- 코드
+
+```java
+package com.eomcs.oop.ex01;
+
+// # import - java.lang 패키지
+
+public class Exam0740 {
+  public static void main(String[] args) {
+    java.lang.Integer obj1; // OK!
+    java.lang.System obj2; // OK!
+    java.io.File obj3; // OK!
+
+    Integer obj4; // OK!
+    System obj5; // OK!
+    //File obj6; // 컴파일 오류!
+  }
+}
+```
