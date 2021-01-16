@@ -1,3 +1,12 @@
+---
+layout: post
+title: JavaAlgorithm01
+categories: JavaAlgorithm
+layout : single
+toc : true 
+toc_sticky : true
+---
+
 # 01 기본 알고리즘
 
 ## 01-1 알고리즘이란?
