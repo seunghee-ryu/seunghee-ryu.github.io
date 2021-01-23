@@ -1,5 +1,5 @@
 ---
-layout: post
+ayout: post
 title: JavaAlgorithm01
 categories: JavaAlgorithm
 layout : single
