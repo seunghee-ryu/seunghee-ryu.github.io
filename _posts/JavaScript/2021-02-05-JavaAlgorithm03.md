@@ -7,7 +7,7 @@ toc : true
 toc_sticky : true
 ---
 
-# 검색
+# 검색 
 
 ## 03-1 검색 알고리즘
 
