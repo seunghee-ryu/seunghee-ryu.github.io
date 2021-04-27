@@ -1,6 +1,6 @@
 ---
 ayout: post
-title: 제이 반전 컨테이너
+title: 제어 반전 컨테이너
 categories: etc
 layout : single
 toc : true 
