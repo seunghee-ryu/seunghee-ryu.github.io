@@ -7,6 +7,7 @@
   - 즉 워크스페이스 폴더를 새로 지정하면 설정도 새로 해야 한다.
   - 1) General/Apearance/Colors and Fonts
     - Basic/Text Font를 자신의 취향에 맞춰 설정한다.
+    - D2Coding 폰트 사용
   - 2) General/Editors/Text Editors
     - Insert spaces for tabs 체크
       - Displayed tab width : 2
