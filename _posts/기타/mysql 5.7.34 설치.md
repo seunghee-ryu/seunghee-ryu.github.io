@@ -9,10 +9,10 @@
   - 안에 아래 내용을 적는다.
   - [mysqld]
 
-    # set basedir to your installation 
+    \# set basedir to your installation 
     basedir=C:\mysql-5.7.34-winx64
 
-    # set datadir to the location of your data directory
+    \# set datadir to the location of your data directory
     datadir=C:\mysql-5.7.34-winx64/data
 
     port=3306
