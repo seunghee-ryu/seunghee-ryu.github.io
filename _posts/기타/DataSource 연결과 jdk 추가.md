@@ -5,3 +5,4 @@
 
 # jdk 추가
 - 방법 : https://tychejin.tistory.com/41
+- 방법 : https://mainia.tistory.com/5629
