@@ -61,3 +61,7 @@
     | 5.7.34    |
     +-----------+
     1 row in set (0.00 sec)
+    
+    
+## mysql workbench
+- https://gmlwjd9405.github.io/2018/05/09/mysql-workbench-guide.html
